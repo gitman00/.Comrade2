@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	transition: 0.5s;
+	letter-spacing: 5px;
+	box-sizing: border-box;
+	font-family: 'Bebas Neue', cursive;
+}
+main {
+	gap: 50px;
+	padding: 100px;
+	background: #f7ef9b;
+}
+main,
+header,
+section {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main {
+	flex-direction: column;
+}
+header {
+	z-index: 1;
+	padding: 20px 50px;
+	position: fixed;
+	background: rgba(247, 239, 155, 0.6);
+	border-bottom: 1px solid #000;
+	justify-content: space-between;
+}
+header .title {
+	padding: 10px;
+	text-align: center;
+}
+header .title strong {
+	font-size: 2rem;
+}
+header nav {
+	gap: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header nav a ,
+section.two .introduction a {
+	position: relative;
+	color: #000;
+	padding: 10px;
+	text-decoration: none;
+}
+header nav a::before {
+	position: absolute;
+	content: '';
+	left: 10%;
+	bottom: 0%;
+	width: 0px;
+	height: 2px;
+	transition: 0.5s;
+}
+header nav a:hover::before {
+	width: 60px;
+	background: #000;
+}
+header nav a:nth-child(3) {
+	color: #fff;
+	background: #000;
+}
+section {
+	gap:50px;
+	padding: 50px 100px;
+	text-align: center;
+	min-height: 80vh;
+	border-bottom: 1px solid #000;
+}
+section.one .caption strong ,
+section.two .introduction strong {
+	font-size: 80px;
+	display: flex;
+	flex-direction: column;
+}
+section.two {
+	background: #fff;
+	text-align: left;
+}
+section.two .introduction {
+	gap: 50px;
+}
+section.two .introduction a {
+	position: relative;
+	margin-top: 20px;
+	width: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+section.two .introduction a::before {
+	position: absolute;
+	content: '';
+	left: 3%;
+	bottom: 0%;
+	width: 0px;
+	height: 5px;
+	transition: 0.5s;
+}
+section.two .introduction a:hover::before {
+	
+	width: 200px;
+	background: #000;
+}
+section.two .introduction a ion-icon {
+	font-size: 2rem
+}
