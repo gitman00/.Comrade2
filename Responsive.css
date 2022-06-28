@@ -1,0 +1,44 @@
+@media (max-width: 950px) {
+
+	header.active {
+		align-items: flex-start;
+		height: 40vh;	
+	}
+	header nav {
+		position: fixed;
+		gap: 20px;
+		top: -100%;
+		left: 0%;
+		width: 100%;
+		display: none;
+		padding: 20px 0px;
+		transition: 0.5s;
+		background: #1b1b1b;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: column;
+	}
+	header nav.active {
+		top: 10%;
+		display: flex;
+	}
+	.menuToggler {
+		display: flex;
+	}
+	.menuToggler span.active {
+		transform: rotate(40deg);
+		transition: 0.5s;
+	}
+	.menuToggler span.active::before ,
+	.menuToggler span.active::after {
+		top: -10px;
+		transform: translateY(10px) rotate(100deg);
+		transition: 0.5s;
+	}
+	section {
+		padding: 100px 20px;
+	}
+	.caption {
+		font-size: 3rem;
+	}
+}
