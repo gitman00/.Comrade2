@@ -38,7 +38,21 @@
 	section {
 		padding: 100px 20px;
 	}
-	.caption {
+	.caption ,
+	.title2 h1 {
 		font-size: 3rem;
+	}
+	.imgbox {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.imgbox img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.txt p {
+		width: 100%;
 	}
 }

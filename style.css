@@ -63,7 +63,7 @@ a::after  {
 	height: 2px;
 	transition: 0.5s;
 	border-radius: 20px;
-	background: rgb(255,0,0);
+	background: red;
 }
 a::after  {
 	left: 100%;
@@ -74,6 +74,9 @@ a:hover::after  {
 a:hover::before,
 a:hover::after  {
 	width: 100%;
+}
+ion-icon {
+	font-size: 1.5rem;
 }
 header nav {
 	transition: 0.5s;
@@ -129,14 +132,37 @@ header nav a:nth-child(3) {
 	justify-content: center;
 	flex-direction: column;
 }
-.caption span {
+.caption span,
+.title2 h1 {
 	display: flex;
 	font-size: 10rem;
-	min-height: 100vh;
+	text-align: center;
+	align-items: center;
+	transition: 0.5s;
+	flex-direction: column;
+	justify-content: center;
+}
+.txt {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+}
+.txt p {
+	text-align: center;
+	line-height: 25px;
+	width: 50%;
+}
+.txt a {
+	gap: 10px;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.caption span:hover {
-	color: transparent;	
-	-webkit-text-stroke: 2px #1b1b1b;
+.imgbox img {
+	border-radius: 50%;
+	background: linear-gradient(145deg, #e6e6e6, #ffffff);
+	box-shadow:  5px 5px 9px #666666,
+             -5px -5px 9px #ffffff;
 }
