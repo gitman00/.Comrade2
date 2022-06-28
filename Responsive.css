@@ -2,7 +2,7 @@
 
 	header.active {
 		align-items: flex-start;
-		height: 40vh;	
+		height: 30vh;	
 	}
 	header nav {
 		position: fixed;
@@ -42,15 +42,9 @@
 	.title2 h1 {
 		font-size: 3rem;
 	}
-	.imgbox {
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-	}
-	.imgbox img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+	.container ,
+	.txt {
+		flex-direction: column;
 	}
 	.txt p {
 		width: 100%;

@@ -6,31 +6,18 @@
 	box-sizing: border-box;
 	font-family: 'Bebas Neue', cursive;
 }
-/*.cursor {
-	position: fixed;
-	top: 0%;
-	left: 0%;
-	z-index: 10;
-	display: flex;
-	transition: 0.5s;
-	filter: invert();
-	border-radius: 20px;
-	background: #1b1b1b;
-	align-items: center;
-	justify-content: space-around;
-}*/
 header {
 	position: fixed;
 	top: 0%;
 	left: 0%;
 	z-index: 1;
 	width: 100%;
-	padding: 10px 0px;
+	padding: 10px;
 	display: flex;
 	transition: 0.5s;
 	background: #1b1b1b;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 section {
 	position: relative;
@@ -45,6 +32,27 @@ section {
 	justify-content: center;
 	flex-direction: column;
 }
+.imgbox {
+	gap: 10px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.imgbox img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border: 5px solid #47A59F;
+}
+.imgbox img {
+	background: linear-gradient(145deg, #e6e6e6, #ffffff);
+	box-shadow:  5px 5px 9px #666666,
+             -5px -5px 9px #ffffff;
+}
 a {
 	position: relative;
 	color: #000;
@@ -53,8 +61,7 @@ a {
 	margin: 0px 10px;
 	text-decoration: none;
 }
-a::before,
-a::after  {
+a::before  {
 	position: absolute;
 	content: '';
 	left: 0%;
@@ -63,20 +70,13 @@ a::after  {
 	height: 2px;
 	transition: 0.5s;
 	border-radius: 20px;
-	background: red;
+	background: #47A59F;
 }
-a::after  {
-	left: 100%;
-}
-a:hover::after  {
-	left: 0%;
-}
-a:hover::before,
-a:hover::after  {
+a:hover::before  {
 	width: 100%;
 }
 ion-icon {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 header nav {
 	transition: 0.5s;
@@ -89,8 +89,8 @@ header .title a  {
 	font-size: 2rem;
 }
 header nav a:nth-child(3) {
-	color: #1b1b1b;
-	background: #fff;
+	color: #ffffff;
+	background: #47A59F;
 }
 .menuToggler {
 	display: none;
@@ -134,6 +134,7 @@ header nav a:nth-child(3) {
 }
 .caption span,
 .title2 h1 {
+	color: #1b1b1b;
 	display: flex;
 	font-size: 10rem;
 	text-align: center;
@@ -142,12 +143,22 @@ header nav a:nth-child(3) {
 	flex-direction: column;
 	justify-content: center;
 }
-.txt {
+.title2 h1 span:nth-child(odd) {
+	color: #47A59F;
+}
+.container {
+	gap: 20px;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
+}
+.txt {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 	gap: 10px;
+
 }
 .txt p {
 	text-align: center;
@@ -159,10 +170,4 @@ header nav a:nth-child(3) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-.imgbox img {
-	border-radius: 50%;
-	background: linear-gradient(145deg, #e6e6e6, #ffffff);
-	box-shadow:  5px 5px 9px #666666,
-             -5px -5px 9px #ffffff;
 }
