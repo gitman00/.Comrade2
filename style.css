@@ -31,28 +31,29 @@ section {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	background: url("Background.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 .imgbox {
 	gap: 10px;
-	width: 100%;
-	height: 100%;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	border-radius: 15px;
+	background: linear-gradient(145deg, #40958f, #4cb1aa);
+	box-shadow:  50px 50px 100px #1c4240,
+             -50px -50px 100px #72fffe;
 }
 .imgbox img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	border: 5px solid #47A59F;
 }
-.imgbox img {
-	background: linear-gradient(145deg, #e6e6e6, #ffffff);
-	box-shadow:  5px 5px 9px #666666,
-             -5px -5px 9px #ffffff;
-}
+
 a {
 	position: relative;
 	color: #000;
@@ -61,18 +62,18 @@ a {
 	margin: 0px 10px;
 	text-decoration: none;
 }
-a::before  {
+a::before {
 	position: absolute;
 	content: '';
 	left: 0%;
 	bottom: 0%;
 	width: 0%;
-	height: 2px;
+	z-index: -1;
+	height: 100%;
 	transition: 0.5s;
-	border-radius: 20px;
 	background: #47A59F;
 }
-a:hover::before  {
+a:hover::before {
 	width: 100%;
 }
 ion-icon {
@@ -107,7 +108,7 @@ header nav a:nth-child(3) {
 	width: 40px;
 	height: 5px;
 	border-radius: 5px;
-	background: #fff;	
+	background: #47A59F;	
 }
 .menuToggler span::before ,
 .menuToggler span::after  {
@@ -117,7 +118,7 @@ header nav a:nth-child(3) {
 	bottom: 10px;
 	width: 100%;
 	height: 5px;
-	background: #fff;
+	background: #47A59F;
 	border-radius: 5px;
 }
 .menuToggler span::after {
@@ -143,22 +144,26 @@ header nav a:nth-child(3) {
 	flex-direction: column;
 	justify-content: center;
 }
-.title2 h1 span:nth-child(odd) {
+.title2 h1 span:nth-child(1),
+.title2 h1 span:nth-child(2) {
+	/*color: transparent;
+	-webkit-text-stroke: 2px #1b1b1b;*/
 	color: #47A59F;
 }
 .container {
-	gap: 20px;
+	gap: 50px;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 .txt {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	gap: 10px;
-
+	flex-direction: column;
 }
 .txt p {
 	text-align: center;
