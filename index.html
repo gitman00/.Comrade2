@@ -2,38 +2,51 @@
 <html>
 <head>
 	<title>Comrade</title>
-	<meta charset="utf-8" content="width=device-width,initial-scale=1" name="viewport">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<!-- <link rel="stylesheet" type="text/css" href="Responsive.css"> -->
-	<link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css"> -->
 	<script defer src="app.js"></script>
+	
 </head>
 <body>
-	<header data-aos="fade-down" >
-		<div class="title">
-			<h2 data-aos="fade-up" >Comrade</h2>
+	<header>
+		<div class="logo">
+			<strong>Comrade</strong>
 		</div>
-		<nav data-aos="fade-up" >
-			<a href="">Let's Talk</a>
+		<nav>
+			<a href="#founder_notes">About Me</a>
+			<button type="button">Let's Talk</button>
 		</nav>
 	</header>
+
 	<section>
-		<div class="head">
-			<h1 data-aos="fade-left" >I want to be the part of your journey. Let me be your comrade.</h1>
-			<p data-aos="fade-down" >After all, you need a friend.</p>
-			<a href="" data-aos="fade-up" >Let's Get To Know Me</a>
-		</div>
-		<div class="imgbox">
-			<img data-aos="fade-down" src="Mypic.png">
-		</div>
+
+			<div class="txt">
+				<h1>Let Me Be Your  Comrade.</h1>
+				<h3>After all, you need a friend.</h3>
+				<button type="button">Let's Get To Know Me</button>
+			</div>
+			<div class="imgbox" >
+				<img class="img" src="Mypic.png">
+			</div>
+		
 	</section>
 
 
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<!-- <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+	<script type="text/javascript" src="vanilla-tilt.js"></script>
 	<script type="text/javascript">
-		AOS.init ({
-			duration: 900,
-			offset: 200,
+
+		// AOS.init ({
+		// 	duration: 900,
+		// 	offset: 200,
+		// });
+
+		VanillaTilt.init(document.querySelector('.img'), {
+			max: 25,
+			speed: 400,
+			glare: true,
+			"max-glare": 5,
 		});
 	</script>
 </body>

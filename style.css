@@ -2,128 +2,140 @@
 * {
 	margin:0;
 	padding: 0px;
+	font-family: Arial;
 	box-sizing: border-box;
-	font-family: 'Arima';
-	text-align: center;
-	/*animation: see 10s ease-in-out 1;*/
 }
-/*--------------------------------------------------------------------------------------------------*/
-/*--------------------------------------  header section -------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
+a {
+	position: relative;
+	padding: 5px 10px;
+	text-decoration: none;
+	display: inline-block;
+}
+a::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0%;
+	height: 2px;
+	background: #fff;
+	transition: 0.5s;
+}
+a:hover::before {
+	width: 100%;
+}
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin: 0px 10px;
+	padding: 10px 15px;
+	border-radius: 20px;
+	color: #fff;
+	box-shadow: 2px 2px 5px rgba(255,255,255,0.2);
+	background: rgba(9,9,121,1);
+	text-transform: uppercase;
+}
 header {
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 1;
 	width: 100%;
-	padding:10px 20px;
+	z-index: 1;
 	display: flex;
+	padding: 20px 50px;
 	align-items: center;
-	background: rgba(117, 87, 240, 0.3); 	
 	justify-content: space-between;
 }
-header nav,
-header .title,
+
+header .logo
+header nav ,
+section .txt,
 section .imgbox {
 	gap: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-header .title h2 {
-	color: #7557F0;
-	font-weight: 900;
+header .logo strong {
+	color: #fff;
 	font-size: 1.5rem;
 }
-header nav a ,
-section .head a {
+header nav a{
 	color: #fff;
-	font-weight: 500;
-	display: inline-block;
-	border-radius: 20px;
-	padding: 5px 15px;
-	text-decoration: none;
-	background: #9E89F5;
 }
-section .head a:hover,
-header nav a:hover {
-	background: #523DA8;
+header nav button {
+	color: #fff;
+	background: rgba(9,9,121,1);
 }
+
 section {
 	position: relative;
 	left: 0;
 	top: 0;
 	width: 100%;
 	display: flex;
-	padding: 50px;
-	min-height: 100vh;
+	padding: 20px 40px;
+	min-height: 100vh; 
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
+	background: linear-gradient(45deg, rgba(0,212,255,1) 0%, 
+		rgba(9,9,121,1) 55%, 
+		rgba(2,0,36,1) 100%);
 }
-/*--------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-@keyframes see {
-	0%{
-		transform: scale(1);
-	}
-	20% {
-		transform: scale(0);
-	}
-	40% {
-		transform: scale(0.9);
-	}
-	60% {
-		transform: scale(1);
-	}
-	80% {
-		transform: scale(0.9);
-	}
-	100% {
-		transform: scale(1);
-	}
+section .txt {
+	width: 50%;
+	align-items: flex-start;
+	flex-direction: column;
 }
-section .head h1 {
-	color: #523DA8;
-	font-size: 2rem;
+section .txt h1 {
+	color: #fff;
+	font-size: 5em;
 }
-section .head p {
-	color: #523DA8;
-	font-size: 1.2rem;
+section .txt h3 {
+	color: #fff;
+}
+section .imgbox {
+	width: 20%;
 }
 section .imgbox img {
-	transition: 0.5s;
-	filter: drop-shadow(20px 20px 100px #523DA8);
+	width: 100%;
+	object-fit: contain;
+	border-radius: 15px;
+	background: rgba(255,255,255,0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+	border-top: 1px solid rgba(255,255,255, 0.5);
+	border-left: 1px solid rgba(255,255,255, 0.5);
 }
-/*--------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------*/
 
-@media (max-width: 900px ) {
-	section,
-	header nav,
-	header .title,
-	section .imgbox {
-		padding: 5px;
+
+@media (max-width: 900px) {
+	section {
+		gap: 50px;
+		padding: 100px 20px;
 		flex-direction: column;
 	}
-	section {
-		padding: 100px 20px;
+	header {
+		padding: 10px;
+	}
+	section .txt h1 {
+		font-size: 3rem;
+	}
+	section .txt h3 {
+		font-size: 0.8rem;
+	}
+	section .txt {	
+		width: 100%;
+		text-align: center;
+		align-items: center;
 	}
 	section .imgbox {
 		width: 100%;
-		height: 100%;
-		overflow: hidden;
-	}
-	section .imgbox img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain; 	
 	}
 	header nav {
-		display: none;
+		display: none;	
 	}
+
 }
